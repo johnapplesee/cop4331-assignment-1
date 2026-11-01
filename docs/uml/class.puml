@@ -1,0 +1,50 @@
+@startuml Class Diagram
+
+User <|-- indexhtml
+User <|-- colorhtml
+indexhtml <|-- Javascript
+colorhtml <|-- Javascript
+Javascript <|-- API
+API <|-- Database
+
+class User {
+    Browser
+}
+
+class indexhtml {
+    loginName
+    loginPassword
+    loginButton
+}
+
+class colorhtml {
+    logoutButton
+    searchText
+    searchColorButton
+    colorText
+    addColorButton
+}
+
+class Javascript {
+    doLogin()
+    addColor()
+    searchColor()
+    doLogOut()
+} 
+
+class API {
+    SearchColors.php
+    AddColor.php
+    Login.php
+}
+
+class Database {
+    -Users
+    ID, FirstName, LastName, Login, Password
+    -Colors
+    ID, Name, UserID
+    -Contacts
+    ID, FirstName, LastName, Phone, Email, UserID
+    
+}
+@enduml
