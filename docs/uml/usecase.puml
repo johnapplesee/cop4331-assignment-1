@@ -1,0 +1,19 @@
+@startuml Use Case Diagram
+
+
+:User: --> (Login)
+(Login) --> (Login.php)
+(Login.php) --> (Login.php) : User/Password combination incorrect
+(Login.php) --> (color.html) : Login function returns
+(color.html) --> (SearchColor)
+(SearchColor) --> (SearchColors.php)
+(AddColor) --> (AddColor.php)
+(AddColor.php) --> (color.html) : Color has been added
+(LogOut) --> (Login) : User Logs Out
+(color.html) --> (AddColor)
+(SearchColors.php) --> (color.html) : If Color Was/Was Not Found
+
+(color.html) --> (LogOut)
+
+
+@enduml
