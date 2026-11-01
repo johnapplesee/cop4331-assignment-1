@@ -1,0 +1,20 @@
+@startuml Activity 
+
+start
+repeat
+:Login Screen; 
+   
+repeat while (login info) is (incorrect)
+->//correct//;
+:Colors Page;
+
+switch (button clicked)
+case (Search Color) 
+    :Search Colors;
+case (Add Color) 
+    :Allow User to Add Colors;
+case (Log Out)
+    
+endswitch
+stop
+@enduml
