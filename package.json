@@ -1,0 +1,32 @@
+{
+  "name": "cop4331-assignment-1",
+  "version": "1.0.0",
+  "description": "Example Web App Using the LAMP Stack",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnapplesee/cop4331-assignment-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/johnapplesee/cop4331-assignment-1/issues"
+  },
+  "homepage": "https://github.com/johnapplesee/cop4331-assignment-1#readme",
+  "dependencies": {
+    "csslint": "^1.0.5",
+    "phplint": "^2.0.5",
+    "quick-lint-js": "^3.2.0"
+  },
+  "devDependencies": {
+    "@linthtml/linthtml": "^0.10.2"
+  }
+}
