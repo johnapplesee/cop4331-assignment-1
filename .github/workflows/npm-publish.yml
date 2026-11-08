@@ -5,32 +5,38 @@ name: Node.js Package
 
 on:
   push:
-
-  release:
-    types: [created]
-  
+    branches: assignment-4
+    paths:
+      - "**.js"
+      - "**.html"
+      - "**.css"
+  pull_request:
+    branches: assignment-4
+    paths:
+      - "**.js"
+      - "**.html"
+      - "**.css"
 
 jobs:
-  build:
+  HTML_Linting:
+    name: html linter
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm ci
-      - run: npm test
+    steps:  
+      - run: node_modules/.bin/linthtml "/public/color.html"
+      - run: node_modules/.bin/linthtml "/public/index.html"
 
-  publish-npm:
-    needs: build
+  CSS_Linting:
+    name: css linter
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+        - run: node_modules/.bin/csslint "public/css/styles.css"
+  JS_Linting:
+    name: js linter
+    runs-on: ubuntu-latest
+    steps:
+      - run: node_modules/.bin/quick-lint-js public/js/code.js
+
+  
+
+
+  
