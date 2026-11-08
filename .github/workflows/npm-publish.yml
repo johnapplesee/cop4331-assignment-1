@@ -17,8 +17,8 @@ jobs:
     steps:  
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-      - run: npx node_modules/.bin/linthtml "/public/color.html"
-      - run: npx node_modules/.bin/linthtml "/public/index.html"
+      - run: chmod +x node_modules/.bin/linthtml "/public/color.html"
+      - run: chmod +x node_modules/.bin/linthtml "/public/index.html"
 
   CSS_Linting:
     name: css linter
@@ -26,14 +26,14 @@ jobs:
     steps:
         - uses: actions/checkout@v4
         - uses: actions/setup-node@v4
-        - run: npx node_modules/.bin/csslint "public/css/styles.css"
+        - run: chmod +x node_modules/.bin/csslint "public/css/styles.css"
   JS_Linting:
     name: js linter
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-      - run: npx node_modules/.bin/quick-lint-js public/js/code.js
+      - run: chmod +x node_modules/.bin/quick-lint-js public/js/code.js
 
   
 
