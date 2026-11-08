@@ -6,16 +6,9 @@ name: Node.js Package
 on:
   push:
     branches: assignment-4
-    paths:
-      - "**.js"
-      - "**.html"
-      - "**.css"
   pull_request:
     branches: assignment-4
-    paths:
-      - "**.js"
-      - "**.html"
-      - "**.css"
+    
 
 jobs:
   HTML_Linting:
