@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
       - run: chmod +x node_modules/.bin/linthtml "/public/color.html"
-      - run: chmod +x node_modules/.bin/linthtml "/public/index.html"
+             chmod +x node_modules/.bin/linthtml "/public/index.html"
 
   CSS_Linting:
     name: css linter
