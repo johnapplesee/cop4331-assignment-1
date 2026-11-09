@@ -26,6 +26,7 @@ jobs:
         - uses: actions/checkout@v4
         - uses: actions/setup-node@v4
         - run: chmod +x node_modules/.bin/csslint "public/css/styles.css"
+        
   JS_Linting:
     name: js linter
     runs-on: ubuntu-latest
