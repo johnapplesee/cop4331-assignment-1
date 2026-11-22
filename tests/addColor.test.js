@@ -1,0 +1,1 @@
+import { addColor } from "../public/js/code";

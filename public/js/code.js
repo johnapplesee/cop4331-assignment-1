@@ -183,3 +183,8 @@ function searchColor()
 	}
 	
 }
+
+module.exports = {
+	doLogin,
+	addColor
+}
