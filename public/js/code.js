@@ -184,7 +184,5 @@ function searchColor()
 	
 }
 
-module.exports = {
-	doLogin,
-	addColor
-}
+exports.doLogin = doLogin;
+exports.addColor = addColor;
