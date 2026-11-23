@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "jest --env=jsdom"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,11 +23,16 @@
   "homepage": "https://github.com/johnapplesee/cop4331-assignment-1#readme",
   "dependencies": {
     "csslint": "^1.0.5",
+    "jsdom": "^31.0.1",
     "phplint": "^2.0.5",
     "quick-lint-js": "^3.2.0"
   },
   "devDependencies": {
     "@linthtml/linthtml": "^0.10.2",
-    "jest": "^30.0.0-rc.1"
+    "jest": "^30.0.0-rc.1",
+    "jest-environment-jsdom": "^30.5.2"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   }
 }
