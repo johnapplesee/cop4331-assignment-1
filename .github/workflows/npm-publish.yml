@@ -1,5 +1,5 @@
 
-name: HTML, CSS, and Javascript Linter
+name: HTML, CSS, Javascript Linter, and Jest Tester
 
 on:
   push:
