@@ -3,9 +3,9 @@ name: HTML, CSS, Javascript Linter, and Jest Tester
 
 on:
   push:
-    branches: assignment-4
+    branches: assignment-5
   pull_request:
-    branches: assignment-4
+    branches: assignment-5
 
 jobs:
   HTML_Linting:
