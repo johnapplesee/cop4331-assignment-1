@@ -39,6 +39,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
+      - run: chmod +x which npm
+      - run: chmod +x hash -r
       - run: chmod +x npm test
 
   
